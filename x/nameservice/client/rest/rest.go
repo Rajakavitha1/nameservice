@@ -3,7 +3,7 @@ package rest
 import (
 	"github.com/gorilla/mux"
 
-	"github.com/cosmos/cosmos-sdk/client/context, string"
+	"github.com/cosmos/cosmos-sdk/client/context"
 )
 
 // RegisterRoutes registers nameservice-related REST handlers to a router
