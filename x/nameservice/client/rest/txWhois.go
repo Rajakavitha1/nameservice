@@ -19,7 +19,7 @@ type buyNameRequest struct {
 	Price   string       `json:"price"`
 }
 
-func buyNameHandler(cliCtx context.CLIContext,storeName string) http.HandlerFunc {
+func buyNameHandler(cliCtx context.CLIContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var req buyNameRequest
 		if !rest.ReadRESTReq(w, r, cliCtx.Codec, &req) {
@@ -59,7 +59,7 @@ type setWhoisRequest struct {
 	Owner   string       `json:"owner"`
 }
 
-func setWhoisHandler(cliCtx context.CLIContext,storeName string) http.HandlerFunc {
+func setWhoisHandler(cliCtx context.CLIContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var req setWhoisRequest
 		if !rest.ReadRESTReq(w, r, cliCtx.Codec, &req) {
@@ -93,7 +93,7 @@ type deleteWhoisRequest struct {
 	Name    string       `json:"name"`
 }
 
-func deleteWhoisHandler(cliCtx context.CLIContext, storeName string) http.HandlerFunc {
+func deleteWhoisHandler(cliCtx context.CLIContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var req deleteWhoisRequest
 		if !rest.ReadRESTReq(w, r, cliCtx.Codec, &req) {
