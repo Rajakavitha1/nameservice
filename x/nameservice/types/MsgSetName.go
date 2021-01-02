@@ -47,7 +47,7 @@ func (msg MsgSetName) GetSignBytes() []byte {
 
 // GetSigners defines whose signature is required
 func (msg MsgSetName) GetSigners() []sdk.AccAddress {
-	return []sdk.AccAddress{msg.Owner}
+	return []sdk.AccAddress{msg.Buyer}
 }
 
 
